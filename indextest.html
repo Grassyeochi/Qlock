@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta property="og:url"                content="grassyeochi.github.io/Clock-magic/indextest.html" />
   <meta property="og:type"               content="website" />
-  <meta property="og:title"              content="시계" />
+  <meta property="og:title"              content="카드 시계" />
   <meta property="og:description"        content="당신의 시간은 몇시인가요?" />
   <meta property="og:image"              content="thumnail.jpg" />
   <meta property="og:image:width" content="1200">
@@ -33,45 +33,45 @@
     <label id="labelselectClock1" for="selectClock">생각한 시간은 → </label>
     <input id="selectClock" type="document.getElementById("selectClock").valueber" min="1" max="12" value = "1" />
     <label id="labelselectClock2" for="selectClock">시</label>
-    <input id= "selectClockbutton"type="submit" value="입니다" onclick="toggleImg()" />
+    <input id= "selectClockbutton"type="submit" value="입니다" onclick="toggleImg(document.getElementById("selectClock").num" />
   </div>
   
   <script>
-    function toggleImg() {
-      if (document.getElementById("selectClock").value == 1){
+    function toggleImg(int num) {
+      if (num == 1){
         document.getElementById("img").src = "01시.png";
       }
-      else if (document.getElementById("selectClock").value == 2){
+      else if (num == 2){
         document.getElementById("img").src = "02시.png";
       }
-      else if (document.getElementById("selectClock").value == 3){
+      else if (num == 3){
         document.getElementById("img").src = "03시.png";
       }
-      else if (document.getElementById("selectClock").value == 4){
+      else if (num == 4){
         document.getElementById("img").src = "04시.png";
       }
-      else if (document.getElementById("selectClock").value == 5){
+      else if (num == 5){
         document.getElementById("img").src = "05시.png";
       }
-      else if (document.getElementById("selectClock").value == 6){
+      else if (num == 6){
         document.getElementById("img").src = "06시.png";
       }
-      else if (document.getElementById("selectClock").value == 7){
+      else if (num == 7){
         document.getElementById("img").src = "07시.png";
       }
-      else if (document.getElementById("selectClock").value == 8){
+      else if (num == 8){
         document.getElementById("img").src = "08시.png";
       }
-      else if (document.getElementById("selectClock").value == 9){
+      else if (num == 9){
         document.getElementById("img").src = "09시.png";
       }
-      else if (document.getElementById("selectClock").value == 10){
+      else if (num == 10){
         document.getElementById("img").src = "10시.png";
       }
-      else if (document.getElementById("selectClock").value == 11){
+      else if (num == 11){
         document.getElementById("img").src = "11시.png";
       }
-      else if (document.getElementById("selectClock").value == 12){
+      else if (num == 12){
         document.getElementById("img").src = "12시.png";
       }
       document.getElementById("labelselectClock1").style.display = "none";
