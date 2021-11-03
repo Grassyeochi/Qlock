@@ -31,9 +31,9 @@
     <img id="img" src="clock.png" />
     </br>
     <label id="labelselectClock1" for="selectClock">생각한 시간은</label>
-    <input id="selectClock" type="number" min="1" max="12" value = "1" />
-    <label id="labelselectClock2" for="selectClock">시 입니다</label>
-    <input id= "selectClockbutton"type="submit" value="확인" onclick="toggleImg()" />
+    <input id="selectClock" type="document.getElementById("selectClock").valueber" min="1" max="12" value = "1" />
+    <label id="labelselectClock2" for="selectClock">시</label>
+    <input id= "selectClockbutton"type="submit" value="입니다" onclick="toggleImg()" />
   </div>
   
   <script>
@@ -74,6 +74,11 @@
       else if (document.getElementById("selectClock").value == 12){
         document.getElementById("img").src = "12시.png";
       }
+      else{
+        document.alert("잘못된 입력")
+        return;
+      }
+        
       document.getElementById("labelselectClock1").style.display = "none";
       document.getElementById("selectClock").style.display = "none";
       document.getElementById("labelselectClock2").style.display = "none";
