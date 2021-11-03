@@ -74,6 +74,10 @@
       else if (document.getElementById("selectClock").value == 12){
         document.getElementById("img").src = "12시.png";
       }
+      else{
+        alert("잘못된 입력. 1~12사이의 숫자를 입력해야합니다.");
+        return;
+      }
       document.getElementById("labelselectClock1").style.display = "none";
       document.getElementById("selectClock").style.display = "none";
       document.getElementById("labelselectClock2").style.display = "none";
