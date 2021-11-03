@@ -11,16 +11,73 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   
+  <style>
+      .container {
+        width: 1024px;
+        height: 1024px;
+        text-align: center;
+      }
+      #img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  
 </head>
 
 <body>
 
-  <img src="clock.png" align="center">
-  <label for="selectClock">생각한 시간은 → </label>
-  <input id="selectClock" type="number" min="1" max="12" value = "1" />
-  <label for="selectClock">시</label>
-  <button type="button">입니다</button>
+  <div class="container">
+    <img id="img" src="clock.png" />
+    </br>
+    <label for="selectClock">생각한 시간은 → </label>
+    <input id="selectClock" type="number" min="1" max="12" value = "1" />
+    <label for="selectClock">시</label>
+    <input type="submit" value="입니다" onclick="toggleImg(document.getElementById("selectClock").value)" />
+  </div>
   
+  <script>
+    function toggleImg(num) {
+      if (num == 1){
+        document.getElementById("img").src = "01시.png";
+      }
+      if (num == 2){
+        document.getElementById("img").src = "02시.png";
+      }
+      if (num == 3){
+        document.getElementById("img").src = "03시.png";
+      }
+      if (num == 4){
+        document.getElementById("img").src = "04시.png";
+      }
+      if (num == 5){
+        document.getElementById("img").src = "05 시.png";
+      }
+      if (num == 6){
+        document.getElementById("img").src = "06시.png";
+      }
+      if (num == 7){
+        document.getElementById("img").src = "07시.png";
+      }
+      if (num == 8){
+        document.getElementById("img").src = "08시.png";
+      }
+      if (num == 9){
+        document.getElementById("img").src = "09시.png";
+      }
+      if (num == 10){
+        document.getElementById("img").src = "10시.png";
+      }
+      if (num == 11){
+        document.getElementById("img").src = "11시.png";
+      }
+      if (num == 12){
+        document.getElementById("img").src = "12시.png";
+      }
+      $("#admin_id").hide();
+      
+    }
+  </script>
   
 </body>
 </html>
