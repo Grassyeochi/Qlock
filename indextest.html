@@ -33,50 +33,51 @@
     <label id="labelselectClock1" for="selectClock">생각한 시간은</label>
     <input id="selectClock" type="number" min="1" max="12" value = "1" />
     <label id="labelselectClock2" for="selectClock">시</label>
-    <input id= "selectClockbutton"type="submit" value="입니다" onclick="toggleImg()" />
+    <input id= "selectClockbutton"type="submit" value="입니다" onclick="toggleImg((document.getElementById("selectClock").value)" />
   </div>
   
   <script>
-    function toggleImg() {
-      switch(document.getElementById("selectClock").value){
-        case = "1":
-          document.getElementById("img").src = "01시.png";
-          break;
-        case = "2":
-          document.getElementById("img").src = "02시.png";
-          break;
-        case = "3":
-          document.getElementById("img").src = "03시.png";
-          break;
-        case = "4":
-          document.getElementById("img").src = "04시.png";
-          break;
-        case = "5":
-          document.getElementById("img").src = "05시.png";
-          break;
-        case = "6":
-          document.getElementById("img").src = "06시.png";
-          break;
-        case = "7":
-          document.getElementById("img").src = "07시.png";
-          break;
-        case = "8":
-          document.getElementById("img").src = "08시.png";
-          break;
-        case = "9":
-          document.getElementById("img").src = "09시.png";
-          break;
-        case = "10":
-          document.getElementById("img").src = "10시.png";
-          break;
-        case = "11":
-          document.getElementById("img").src = "11시.png";
-          break;
-        case = "12":          
-          document.getElementById("img").src = "12시.png";
-          break;
+    function toggleImg(num) {
+      if  num == 1){
+        document.getElementById("img").src = "01시.png";
       }
-        
+      else if (num == 2){
+        document.getElementById("img").src = "02시.png";
+      }
+      else if (num == 3){
+        document.getElementById("img").src = "03시.png";
+      }
+      else if (num == 4){
+        document.getElementById("img").src = "04시.png";
+      }
+      else if (num == 5){
+        document.getElementById("img").src = "05시.png";
+      }
+      else if (num == 6){
+        document.getElementById("img").src = "06시.png";
+      }
+      else if (num == 7){
+        document.getElementById("img").src = "07시.png";
+      }
+      else if (num == 8){
+        document.getElementById("img").src = "08시.png";
+      }
+      else if (num == 9){
+        document.getElementById("img").src = "09시.png";
+      }
+      else if (num == 10){
+        document.getElementById("img").src = "10시.png";
+      }
+      else if (num == 11){
+        document.getElementById("img").src = "11시.png";
+      }
+      else if (num == 12){
+        document.getElementById("img").src = "12시.png";
+      }
+      else{
+        alert("잘못된 입력. 1~12사이의 숫자를 입력해야합니다.");
+        return;
+      }
       document.getElementById("labelselectClock1").style.display = "none";
       document.getElementById("selectClock").style.display = "none";
       document.getElementById("labelselectClock2").style.display = "none";
