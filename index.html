@@ -1,45 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
   <meta charset="utf-8">
-  <meta property="og:url"                content="grassyeochi.github.io/Clock-magic/" />
-  <meta property="og:type"               content="website" />
-  <meta property="og:title"              content="카드 시계" />
-  <meta property="og:description"        content="당신의 시간은 몇시인가요?" />
-  <meta property="og:image"              content="thumnail.jpg" />
-  <meta property="og:image:width"        content="1200">
-  <meta property="og:image:height"       content="630">
-  
+  <meta property="og:url" content="grassyeochi.github.io/Clock-magic/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="카드 시계" />
+  <meta property="og:description" content="당신의 시간은 몇시인가요?" />
+  <meta property="og:image" content="thumnail.jpg" />
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
   <style>
-      .container {
-         text-align: center;
-         background-color: #7F00FF;
-      }
+    .container {
+      text-align: center;
+      background-color: #7F00FF;
+    }
 
-      img {
-        width: 1024px;
-        height: 1024px;
-      }
+    img {
+      width: 1024px;
+      height: 1024px;
+    }
 
-      #selectClock{
-        width:100px;
-        height:50px;
-        font-size:40px;
-      }
-    
-      #selectClockbutton{
-        width:100px;
-        height:75px;
-        font-size:40px;
-      }
+    #selectClock {
+      width: 100px;
+      height: 50px;
+      font-size: 40px;
+    }
 
-      label{
-        font-size:40px;
-      }
+    #selectClockbutton {
+      width: 100px;
+      height: 75px;
+      font-size: 40px;
+    }
 
+    label {
+      font-size: 40px;
+    }
   </style>
-  
+
 </head>
 
 <body>
@@ -48,54 +47,23 @@
     <img id="clock_img" src="clock.png" />
     </br>
     <label id="labelselectClock1" for="selectClock">생각한 시간은</label>
-    <input id="selectClock" type="number" min="1" max="12" value = "1" />
+    <input id="selectClock" type="number" min="1" max="12" value="1" />
     <label id="labelselectClock2" for="selectClock">시 입니다</label>
-    <input id="selectClockbutton" type="submit" value="확인" onclick="toggleImg()" />
+    <input id="selectClockbutton" type="submit" value="확인" onclick="javascript:toggleImg(document.getElementById('selectClock').value)" />
+    
     </br></br></br></br></br></br></br></br></br></br>
   </div>
-  
+
   <script>
-    function toggleImg() {
-      if (document.getElementById("selectClock").value == 1){
-        document.getElementById("clock_img").src = "01시.png";
-      }
-      else if (document.getElementById("selectClock").value == 2){
-        document.getElementById("clock_img").src = "02시.png";
-      }
-      else if (document.getElementById("selectClock").value == 3){
-        document.getElementById("clock_img").src = "03시.png";
-      }
-      else if (document.getElementById("selectClock").value == 4){
-        document.getElementById("clock_img").src = "04시.png";
-      }
-      else if (document.getElementById("selectClock").value == 5){
-        document.getElementById("clock_img").src = "05시.png";
-      }
-      else if (document.getElementById("selectClock").value == 6){
-        document.getElementById("clock_img").src = "06시.png";
-      }
-      else if (document.getElementById("selectClock").value == 7){
-        document.getElementById("clock_img").src = "07시.png";
-      }
-      else if (document.getElementById("selectClock").value == 8){
-        document.getElementById("clock_img").src = "08시.png";
-      }
-      else if (document.getElementById("selectClock").value == 9){
-        document.getElementById("clock_img").src = "09시.png";
-      }
-      else if (document.getElementById("selectClock").value == 10){
-        document.getElementById("clock_img").src = "10시.png";
-      }
-      else if (document.getElementById("selectClock").value == 11){
-        document.getElementById("clock_img").src = "11시.png";
-      }
-      else if (document.getElementById("selectClock").value == 12){
-        document.getElementById("clock_img").src = "12시.png";
-      }
-      else{
+    function toggleImg(num) {
+      if (num < 1 || num > 12){
         alert("잘못된 입력. 1~12사이의 숫자를 입력해야합니다.");
         return;
       }
+
+      const imgs = ["01시.png", "02시.png", "03시.png", "04시.png", "05시.png", "06시.png", "07시.png", "08시.png", "09시.png", "10시.png", "11시.png", "12시.png"];
+      document.getElementById("clock_img").src = imgs[num - 1];
+
       document.getElementById("labelselectClock1").style.display = "none";
       document.getElementById("selectClock").style.display = "none";
       document.getElementById("labelselectClock2").style.display = "none";
@@ -104,6 +72,7 @@
       return;
     }
   </script>
-  
+
 </body>
+
 </html>
